@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		002EA4CF9F47D145479552C7 /* Pods_HeadLine_HeadLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A565A3789E46C56BCA201FDE /* Pods_HeadLine_HeadLineUITests.framework */; };
+		37254D1E2AA45C8D00ACA583 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37254D1D2AA45C8D00ACA583 /* ImageCache.swift */; };
+		37254D212AA45E9400ACA583 /* DetailedHeadLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37254D202AA45E9400ACA583 /* DetailedHeadLineViewController.swift */; };
+		3795796B2AA43EDF0091E9CA /* HeadLinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795796A2AA43EDF0091E9CA /* HeadLinesViewController.swift */; };
+		3795796F2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795796D2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift */; };
+		379579702AA43F2F0091E9CA /* HeadLinesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3795796E2AA43F2F0091E9CA /* HeadLinesListTableViewCell.xib */; };
+		379579742AA440F30091E9CA /* NetworkConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379579732AA440F30091E9CA /* NetworkConnectionHandler.swift */; };
+		379579762AA441090091E9CA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379579752AA441090091E9CA /* Utils.swift */; };
+		379579792AA44CF40091E9CA /* HeadLineModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379579782AA44CF40091E9CA /* HeadLineModal.swift */; };
+		3795797C2AA44F660091E9CA /* HeadLineViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795797B2AA44F660091E9CA /* HeadLineViewModal.swift */; };
+		3795797E2AA44FD90091E9CA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795797D2AA44FD90091E9CA /* ApiConstants.swift */; };
 		37E221A12AA3A6AF00E1C45A /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37E2219F2AA3A6AF00E1C45A /* RobotoSlab-Regular.ttf */; };
 		37E221A22AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37E221A02AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf */; };
 		37E221A82AA3AE0000E1C45A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37E221A72AA3AE0000E1C45A /* GoogleService-Info.plist */; };
@@ -43,6 +53,16 @@
 
 /* Begin PBXFileReference section */
 		321DAB6E3FAC1FC9C030CB0C /* Pods-HeadLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadLineTests.release.xcconfig"; path = "Target Support Files/Pods-HeadLineTests/Pods-HeadLineTests.release.xcconfig"; sourceTree = "<group>"; };
+		37254D1D2AA45C8D00ACA583 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		37254D202AA45E9400ACA583 /* DetailedHeadLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedHeadLineViewController.swift; sourceTree = "<group>"; };
+		3795796A2AA43EDF0091E9CA /* HeadLinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLinesViewController.swift; sourceTree = "<group>"; };
+		3795796D2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLinesListTableViewCell.swift; sourceTree = "<group>"; };
+		3795796E2AA43F2F0091E9CA /* HeadLinesListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadLinesListTableViewCell.xib; sourceTree = "<group>"; };
+		379579732AA440F30091E9CA /* NetworkConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionHandler.swift; sourceTree = "<group>"; };
+		379579752AA441090091E9CA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		379579782AA44CF40091E9CA /* HeadLineModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineModal.swift; sourceTree = "<group>"; };
+		3795797B2AA44F660091E9CA /* HeadLineViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineViewModal.swift; sourceTree = "<group>"; };
+		3795797D2AA44FD90091E9CA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		37E2219F2AA3A6AF00E1C45A /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		37E221A02AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		37E221A72AA3AE0000E1C45A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -97,6 +117,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37254D1F2AA45E7A00ACA583 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37254D202AA45E9400ACA583 /* DetailedHeadLineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3795796C2AA43EF30091E9CA /* Xib & View */ = {
+			isa = PBXGroup;
+			children = (
+				3795796D2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift */,
+				3795796E2AA43F2F0091E9CA /* HeadLinesListTableViewCell.xib */,
+			);
+			path = "Xib & View";
+			sourceTree = "<group>";
+		};
+		379579712AA440500091E9CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37F917FB2AA39D3F004439AE /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		379579722AA4405D0091E9CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3795796A2AA43EDF0091E9CA /* HeadLinesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		379579772AA44CDC0091E9CA /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				379579782AA44CF40091E9CA /* HeadLineModal.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		3795797A2AA44F4F0091E9CA /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				3795797B2AA44F660091E9CA /* HeadLineViewModal.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
 		37E221962AA3A5F200E1C45A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +177,9 @@
 		37E221972AA3A60100E1C45A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				379579732AA440F30091E9CA /* NetworkConnectionHandler.swift */,
+				379579752AA441090091E9CA /* Utils.swift */,
+				37254D1D2AA45C8D00ACA583 /* ImageCache.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -115,6 +187,7 @@
 		37E221982AA3A60500E1C45A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				3795797D2AA44FD90091E9CA /* ApiConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -122,6 +195,7 @@
 		37E221992AA3A61300E1C45A /* DetailedHeadLineModule */ = {
 			isa = PBXGroup;
 			children = (
+				37254D1F2AA45E7A00ACA583 /* Controller */,
 			);
 			path = DetailedHeadLineModule;
 			sourceTree = "<group>";
@@ -129,6 +203,9 @@
 		37E2219A2AA3A61E00E1C45A /* HeadLineModule */ = {
 			isa = PBXGroup;
 			children = (
+				3795797A2AA44F4F0091E9CA /* ViewModal */,
+				379579772AA44CDC0091E9CA /* Modal */,
+				379579722AA4405D0091E9CA /* Controller */,
 			);
 			path = HeadLineModule;
 			sourceTree = "<group>";
@@ -136,7 +213,7 @@
 		37E2219B2AA3A62600E1C45A /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
-				37F917FB2AA39D3F004439AE /* LoginViewController.swift */,
+				379579712AA440500091E9CA /* Controller */,
 			);
 			path = LoginModule;
 			sourceTree = "<group>";
@@ -144,6 +221,7 @@
 		37E2219C2AA3A63200E1C45A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3795796C2AA43EF30091E9CA /* Xib & View */,
 				37F917FD2AA39D3F004439AE /* Main.storyboard */,
 				37F918022AA39D40004439AE /* LaunchScreen.storyboard */,
 			);
@@ -362,6 +440,7 @@
 				37E221A22AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf in Resources */,
 				37F918012AA39D40004439AE /* Assets.xcassets in Resources */,
 				37F917FF2AA39D3F004439AE /* Main.storyboard in Resources */,
+				379579702AA43F2F0091E9CA /* HeadLinesListTableViewCell.xib in Resources */,
 				37E221A82AA3AE0000E1C45A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,9 +569,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37254D1E2AA45C8D00ACA583 /* ImageCache.swift in Sources */,
+				3795796F2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift in Sources */,
+				3795796B2AA43EDF0091E9CA /* HeadLinesViewController.swift in Sources */,
+				3795797E2AA44FD90091E9CA /* ApiConstants.swift in Sources */,
+				37254D212AA45E9400ACA583 /* DetailedHeadLineViewController.swift in Sources */,
 				37F917FC2AA39D3F004439AE /* LoginViewController.swift in Sources */,
+				379579762AA441090091E9CA /* Utils.swift in Sources */,
 				37F917F82AA39D3F004439AE /* AppDelegate.swift in Sources */,
+				379579792AA44CF40091E9CA /* HeadLineModal.swift in Sources */,
 				37F917FA2AA39D3F004439AE /* SceneDelegate.swift in Sources */,
+				3795797C2AA44F660091E9CA /* HeadLineViewModal.swift in Sources */,
+				379579742AA440F30091E9CA /* NetworkConnectionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
