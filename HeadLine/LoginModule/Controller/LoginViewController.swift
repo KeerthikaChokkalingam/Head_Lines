@@ -68,11 +68,13 @@ class LoginViewController: UIViewController {
             }
     }
     @IBAction func getCodeAction(_ sender: UIButton) {
+        view.endEditing(true)
         loginViewModel = LoginViewModal()
         if mobileNumberFieldvalue != "" {
             if ((loginViewModel?.isValidPhoneNumber(mobileNumberFieldvalue)) != nil) {
                 // Start phone number verification
-                PhoneAuthProvider.provider().verifyPhoneNumber(mobileNumberFieldvalue, uiDelegate: nil) { (verificationID, error) in
+                let phoneNum = "+91" + mobileNumberFieldvalue
+                PhoneAuthProvider.provider().verifyPhoneNumber(phoneNum, uiDelegate: nil) { (verificationID, error) in
                     if let error = error {
                         print("Error sending verification code: \(error.localizedDescription)")
                         return
@@ -80,7 +82,6 @@ class LoginViewController: UIViewController {
                     // Save the verification ID for later use
                     UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
                     // Proceed to the verification code entry screen
-                    self.performSegue(withIdentifier: "VerificationCodeSegue", sender: nil)
                 }
             }else {
                 //not a valid mobile number through error

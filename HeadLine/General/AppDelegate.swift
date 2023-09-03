@@ -44,6 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        let auth = Auth.auth()
+        if auth.canHandleNotification(userInfo) {
+            print("Remote notification is related to Firebase Authentication.")
+            // Handle the notification as needed for authentication purposes.
+            return
+        }
+        // Handle other types of remote notifications here...
+    }
 }
 
