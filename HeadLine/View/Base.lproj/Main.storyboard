@@ -64,7 +64,7 @@
                                         <rect key="frame" x="0.0" y="100" width="393" height="659"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huF-iI-bK9">
-                                                <rect key="frame" x="36.666666666666657" y="139.66666666666669" width="320" height="380.00000000000006"/>
+                                                <rect key="frame" x="36.666666666666657" y="137.66666666666669" width="320" height="384.00000000000006"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to HeadLines App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q1-r6-yVR">
                                                         <rect key="frame" x="0.0" y="15" width="320" height="24"/>
@@ -80,7 +80,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMM-MF-Krk">
-                                                        <rect key="frame" x="10" y="297.99999999999994" width="300" height="50"/>
+                                                        <rect key="frame" x="10" y="311.99999999999994" width="300" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Rg6-cE-qlS"/>
@@ -103,10 +103,10 @@
                                                         </constraints>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" smartDashesType="no" textContentType="tel"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" returnKeyType="send" smartDashesType="no" textContentType="tel"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r90-ON-x9C">
-                                                        <rect key="frame" x="113.33333333333334" y="247.99999999999994" width="93" height="35"/>
+                                                        <rect key="frame" x="113.33333333333334" y="258.99999999999994" width="93" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="XXY-Sa-UMH"/>
@@ -114,7 +114,19 @@
                                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="  Get Code  "/>
+                                                        <connections>
+                                                            <action selector="getCodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adx-Et-mNu"/>
+                                                        </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSZ-j1-oam">
+                                                        <rect key="frame" x="15" y="242.99999999999994" width="290" height="0.0"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" id="dc7-zZ-35F"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="14"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -124,15 +136,18 @@
                                                     <constraint firstAttribute="trailing" secondItem="2Q1-r6-yVR" secondAttribute="trailing" id="NeD-1h-xj1"/>
                                                     <constraint firstItem="qvF-Nb-ek8" firstAttribute="leading" secondItem="huF-iI-bK9" secondAttribute="leading" constant="15" id="O6n-Lz-7ea"/>
                                                     <constraint firstAttribute="trailing" secondItem="kam-bx-2C3" secondAttribute="trailing" id="VCh-Q8-Qgd"/>
-                                                    <constraint firstAttribute="height" constant="380" id="W4I-M6-2SW"/>
+                                                    <constraint firstAttribute="height" constant="384" id="W4I-M6-2SW"/>
                                                     <constraint firstItem="r90-ON-x9C" firstAttribute="centerX" secondItem="huF-iI-bK9" secondAttribute="centerX" id="XKv-sX-b31"/>
-                                                    <constraint firstItem="r90-ON-x9C" firstAttribute="top" secondItem="qvF-Nb-ek8" secondAttribute="bottom" constant="10" id="d0N-pi-Xr0"/>
+                                                    <constraint firstItem="LSZ-j1-oam" firstAttribute="leading" secondItem="qvF-Nb-ek8" secondAttribute="leading" id="ZLp-wR-8zb"/>
                                                     <constraint firstAttribute="width" constant="320" id="d59-tU-JH0"/>
+                                                    <constraint firstItem="LSZ-j1-oam" firstAttribute="top" secondItem="qvF-Nb-ek8" secondAttribute="bottom" constant="5" id="d9k-Jz-RJk"/>
                                                     <constraint firstItem="tMM-MF-Krk" firstAttribute="leading" secondItem="huF-iI-bK9" secondAttribute="leading" constant="10" id="dds-rD-0XB"/>
                                                     <constraint firstItem="kam-bx-2C3" firstAttribute="leading" secondItem="huF-iI-bK9" secondAttribute="leading" id="fzs-Q7-ff4"/>
                                                     <constraint firstItem="2Q1-r6-yVR" firstAttribute="leading" secondItem="huF-iI-bK9" secondAttribute="leading" id="gG4-Da-sk2"/>
-                                                    <constraint firstItem="tMM-MF-Krk" firstAttribute="top" secondItem="r90-ON-x9C" secondAttribute="bottom" constant="15" id="icd-bw-z5r"/>
+                                                    <constraint firstItem="LSZ-j1-oam" firstAttribute="trailing" secondItem="qvF-Nb-ek8" secondAttribute="trailing" id="gLo-q7-Bjg"/>
+                                                    <constraint firstItem="tMM-MF-Krk" firstAttribute="top" secondItem="r90-ON-x9C" secondAttribute="bottom" constant="18" id="icd-bw-z5r"/>
                                                     <constraint firstAttribute="trailing" secondItem="qvF-Nb-ek8" secondAttribute="trailing" constant="15" id="tx9-da-0YC"/>
+                                                    <constraint firstItem="r90-ON-x9C" firstAttribute="top" secondItem="LSZ-j1-oam" secondAttribute="bottom" constant="16" id="wZk-vJ-fWa"/>
                                                     <constraint firstAttribute="trailing" secondItem="tMM-MF-Krk" secondAttribute="trailing" constant="10" id="zxK-Dz-ISm"/>
                                                 </constraints>
                                             </view>
@@ -167,8 +182,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="CCw-Df-b9q"/>
                     <connections>
+                        <outlet property="getCodeButton" destination="r90-ON-x9C" id="J6h-eE-HbR"/>
                         <outlet property="logInWithGoogleButton" destination="tMM-MF-Krk" id="JAj-cD-r1F"/>
                         <outlet property="loginContentView" destination="huF-iI-bK9" id="NwW-MZ-rSM"/>
+                        <outlet property="mobileErrorLabelHeightAnchor" destination="dc7-zZ-35F" id="EVw-D5-1TD"/>
+                        <outlet property="mobileFieldErrorLabel" destination="LSZ-j1-oam" id="bgv-YO-J7d"/>
                         <outlet property="mobileNumberFiled" destination="qvF-Nb-ek8" id="e47-8c-zNh"/>
                     </connections>
                 </viewController>
@@ -249,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qB-Mc-IgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="3"/>
+            <point key="canvasLocation" x="628" y="3"/>
         </scene>
         <!--Detailed Head Line View Controller-->
         <scene sceneID="zZZ-4Y-4lF">
@@ -346,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2B-fj-jhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798" y="3"/>
+            <point key="canvasLocation" x="1793" y="3"/>
         </scene>
     </scenes>
     <resources>

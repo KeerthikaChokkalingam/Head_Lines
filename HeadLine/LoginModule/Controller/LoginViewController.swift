@@ -12,6 +12,9 @@ import FirebaseFirestore
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var mobileFieldErrorLabel: UILabel!
+    @IBOutlet weak var mobileErrorLabelHeightAnchor: NSLayoutConstraint!
+    @IBOutlet weak var getCodeButton: UIButton!
     @IBOutlet weak var mobileNumberFiled: PaddedTextField!
     @IBOutlet weak var logInWithGoogleButton: UIButton!
     @IBOutlet weak var loginContentView: UIView!
@@ -19,6 +22,7 @@ class LoginViewController: UIViewController {
     var accessToken: String = ""
     var idToken: String = ""
     var loginViewModel: LoginViewModal?
+    var mobileNumberFieldvalue: String = ""
     fileprivate var currentNonce: String?
     
     override func viewDidLoad() {
@@ -63,15 +67,69 @@ class LoginViewController: UIViewController {
                 
             }
     }
+    @IBAction func getCodeAction(_ sender: UIButton) {
+        loginViewModel = LoginViewModal()
+        if mobileNumberFieldvalue != "" {
+            if ((loginViewModel?.isValidPhoneNumber(mobileNumberFieldvalue)) != nil) {
+                // Start phone number verification
+                PhoneAuthProvider.provider().verifyPhoneNumber(mobileNumberFieldvalue, uiDelegate: nil) { (verificationID, error) in
+                    if let error = error {
+                        print("Error sending verification code: \(error.localizedDescription)")
+                        return
+                    }
+                    // Save the verification ID for later use
+                    UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+                    // Proceed to the verification code entry screen
+                    self.performSegue(withIdentifier: "VerificationCodeSegue", sender: nil)
+                }
+            }else {
+                //not a valid mobile number through error
+                errorExists(errorLabelString: "  Not a Valid Mobile Number  ")
+            }
+        } else {
+            // mobile number field is empty through error
+            errorExists(errorLabelString: "  This field is Required  ")
+        }
+    }
     
+    func errorExists(errorLabelString: String) {
+        mobileFieldErrorLabel.text = errorLabelString
+        if let logInContentHeightChange = loginContentView.constraints.filter({$0.firstAttribute == .height}).first {
+            logInContentHeightChange.constant = 400
+        }
+        mobileErrorLabelHeightAnchor.constant = 14
+    }
+    func normalHeight(errorLabelString: String) {
+        mobileFieldErrorLabel.text = errorLabelString
+        if let logInContentHeightChange = loginContentView.constraints.filter({$0.firstAttribute == .height}).first {
+            logInContentHeightChange.constant = 384
+        }
+        mobileErrorLabelHeightAnchor.constant = 0
+    }
 }
 
 extension LoginViewController {
     func setUpUI() {
+        mobileNumberFieldvalue = mobileNumberFiled.text ?? ""
         loginContentView.layer.cornerRadius = 10
+        getCodeButton.layer.cornerRadius = 10
         logInWithGoogleButton.layer.cornerRadius = 15
         mobileNumberFiled.placeholder = "Enter Valid Mobile Number"
         mobileNumberFiled.addPadding(left: 10, right: 10)
+        mobileNumberFiled.delegate = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        view.addGestureRecognizer(tapGesture)
+    }
+    func sendVerificationCode(to phoneNumber: String, completion: @escaping (Error?) -> Void) {
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
+            if let error = error {
+                completion(error)
+                return
+            }
+            // Save the verificationID for later use
+            UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+            completion(nil)
+        }
     }
     func goToHeadlines() {
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "HeadLinesViewController") as? HeadLinesViewController
@@ -80,5 +138,41 @@ extension LoginViewController {
         }
         sceneDelegate.window?.rootViewController = secondViewController
         sceneDelegate.window?.makeKeyAndVisible()
+    }
+    func verifySMSCode(_ code: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
+        if let verificationID = UserDefaults.standard.string(forKey: "authVerificationID") {
+            let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: code)
+            Auth.auth().signIn(with: credential) { (authResult, error) in
+                if let error = error {
+                    completion(nil, error)
+                } else if let authResult = authResult {
+                    completion(authResult, nil)
+                }
+            }
+        } else {
+            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Verification ID not found."])
+            completion(nil, error)
+        }
+    }
+    @objc func handleTap(_ gesture: UITapGestureRecognizer) {
+        normalHeight(errorLabelString: "")
+        view.endEditing(true)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        normalHeight(errorLabelString: "")
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        mobileNumberFieldvalue = textField.text ?? ""
+        return true
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        mobileNumberFieldvalue = textField.text ?? ""
     }
 }
