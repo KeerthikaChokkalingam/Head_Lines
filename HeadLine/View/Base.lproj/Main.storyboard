@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bKd-e4-19n"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bAn-uE-szI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujG-ZL-QcO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -331,6 +331,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="93b-lQ-i0O" id="IA8-CB-YJn"/>
                         <outlet property="headLinesDateLabel" destination="vo1-Mb-g8l" id="VFX-rt-Mof"/>
                         <outlet property="headLinesDescription" destination="4Y6-Rf-aj0" id="83c-p7-ngf"/>
                         <outlet property="headLinesSourceNameLabel" destination="ifY-IR-bYX" id="lig-2X-mGK"/>
