@@ -46,6 +46,10 @@ class DetailedHeadLineViewController: UIViewController {
         let averageColor = renderedImage?.averageColor ?? .white
         let textColor: UIColor = averageColor.isLight ? .black : .white
         backButton.tintColor = textColor
+        headLinesTitleLabel.textColor = textColor
+        headLinesDateLabel.textColor = textColor
+        headLinesSourceNameLabel.textColor = textColor
+        headLinesDescription.textColor = textColor
     }
     
     @IBAction func backToHeadlinesPage(_ sender: UIButton) {

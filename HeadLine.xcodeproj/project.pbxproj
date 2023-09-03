@@ -761,6 +761,7 @@
 				DEVELOPMENT_TEAM = S9H8WZG98K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HeadLine/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Head Lines";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -790,6 +791,7 @@
 				DEVELOPMENT_TEAM = S9H8WZG98K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HeadLine/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Head Lines";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

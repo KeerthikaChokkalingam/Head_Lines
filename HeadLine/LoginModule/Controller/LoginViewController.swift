@@ -33,4 +33,12 @@ extension LoginViewController {
         logInWithAppleButton.layer.cornerRadius = 15
         logInWithGoogleButton.layer.cornerRadius = 15
     }
+    func goToHeadlines() {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        guard let scene = UIApplication.shared.connectedScenes.first, let sceneDelegate = scene.delegate as? SceneDelegate else {
+            fatalError("Could not get scene delegate!")
+        }
+        sceneDelegate.window?.rootViewController = secondViewController
+        sceneDelegate.window?.makeKeyAndVisible()
+    }
 }
