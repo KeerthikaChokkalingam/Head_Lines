@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		002EA4CF9F47D145479552C7 /* Pods_HeadLine_HeadLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A565A3789E46C56BCA201FDE /* Pods_HeadLine_HeadLineUITests.framework */; };
-		37254D1E2AA45C8D00ACA583 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37254D1D2AA45C8D00ACA583 /* ImageCache.swift */; };
 		37254D212AA45E9400ACA583 /* DetailedHeadLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37254D202AA45E9400ACA583 /* DetailedHeadLineViewController.swift */; };
+		37254D232AA4ADED00ACA583 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37254D222AA4ADED00ACA583 /* CustomImageView.swift */; };
+		37254D262AA4B29100ACA583 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37254D252AA4B29100ACA583 /* LoginViewModel.swift */; };
+		37254D282AA4BE3300ACA583 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37254D272AA4BE3300ACA583 /* PaddedTextField.swift */; };
+		37254D2A2AA4BEAF00ACA583 /* ExtensionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37254D292AA4BEAF00ACA583 /* ExtensionConstants.swift */; };
 		3795796B2AA43EDF0091E9CA /* HeadLinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795796A2AA43EDF0091E9CA /* HeadLinesViewController.swift */; };
 		3795796F2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795796D2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift */; };
 		379579702AA43F2F0091E9CA /* HeadLinesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3795796E2AA43F2F0091E9CA /* HeadLinesListTableViewCell.xib */; };
@@ -53,8 +56,11 @@
 
 /* Begin PBXFileReference section */
 		321DAB6E3FAC1FC9C030CB0C /* Pods-HeadLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadLineTests.release.xcconfig"; path = "Target Support Files/Pods-HeadLineTests/Pods-HeadLineTests.release.xcconfig"; sourceTree = "<group>"; };
-		37254D1D2AA45C8D00ACA583 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		37254D202AA45E9400ACA583 /* DetailedHeadLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedHeadLineViewController.swift; sourceTree = "<group>"; };
+		37254D222AA4ADED00ACA583 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		37254D252AA4B29100ACA583 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		37254D272AA4BE3300ACA583 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		37254D292AA4BEAF00ACA583 /* ExtensionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionConstants.swift; sourceTree = "<group>"; };
 		3795796A2AA43EDF0091E9CA /* HeadLinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLinesViewController.swift; sourceTree = "<group>"; };
 		3795796D2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLinesListTableViewCell.swift; sourceTree = "<group>"; };
 		3795796E2AA43F2F0091E9CA /* HeadLinesListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadLinesListTableViewCell.xib; sourceTree = "<group>"; };
@@ -125,6 +131,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		37254D242AA4B27700ACA583 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				37254D252AA4B29100ACA583 /* LoginViewModel.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
 		3795796C2AA43EF30091E9CA /* Xib & View */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +193,8 @@
 			children = (
 				379579732AA440F30091E9CA /* NetworkConnectionHandler.swift */,
 				379579752AA441090091E9CA /* Utils.swift */,
-				37254D1D2AA45C8D00ACA583 /* ImageCache.swift */,
+				37254D222AA4ADED00ACA583 /* CustomImageView.swift */,
+				37254D272AA4BE3300ACA583 /* PaddedTextField.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -188,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				3795797D2AA44FD90091E9CA /* ApiConstants.swift */,
+				37254D292AA4BEAF00ACA583 /* ExtensionConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -213,6 +229,7 @@
 		37E2219B2AA3A62600E1C45A /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
+				37254D242AA4B27700ACA583 /* ViewModal */,
 				379579712AA440500091E9CA /* Controller */,
 			);
 			path = LoginModule;
@@ -569,18 +586,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37254D1E2AA45C8D00ACA583 /* ImageCache.swift in Sources */,
 				3795796F2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift in Sources */,
+				37254D232AA4ADED00ACA583 /* CustomImageView.swift in Sources */,
 				3795796B2AA43EDF0091E9CA /* HeadLinesViewController.swift in Sources */,
 				3795797E2AA44FD90091E9CA /* ApiConstants.swift in Sources */,
 				37254D212AA45E9400ACA583 /* DetailedHeadLineViewController.swift in Sources */,
 				37F917FC2AA39D3F004439AE /* LoginViewController.swift in Sources */,
+				37254D2A2AA4BEAF00ACA583 /* ExtensionConstants.swift in Sources */,
 				379579762AA441090091E9CA /* Utils.swift in Sources */,
 				37F917F82AA39D3F004439AE /* AppDelegate.swift in Sources */,
+				37254D262AA4B29100ACA583 /* LoginViewModel.swift in Sources */,
 				379579792AA44CF40091E9CA /* HeadLineModal.swift in Sources */,
 				37F917FA2AA39D3F004439AE /* SceneDelegate.swift in Sources */,
 				3795797C2AA44F660091E9CA /* HeadLineViewModal.swift in Sources */,
 				379579742AA440F30091E9CA /* NetworkConnectionHandler.swift in Sources */,
+				37254D282AA4BE3300ACA583 /* PaddedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

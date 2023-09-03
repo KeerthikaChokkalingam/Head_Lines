@@ -29,7 +29,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcY-pA-mz1">
                         <rect key="frame" x="16" y="12" width="308" height="149"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLH-tH-4qB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLH-tH-4qB" customClass="CustomImageView" customModule="HeadLine" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="308" height="149"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3S-C3-Pj1">
@@ -79,7 +79,7 @@
             <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="dateLabel" destination="9SQ-Uc-WO1" id="yNe-ks-IBd"/>
-                <outlet property="headLineNewsImage" destination="cLH-tH-4qB" id="gau-JU-CpD"/>
+                <outlet property="headLineNewsImage" destination="cLH-tH-4qB" id="Kla-LZ-UHe"/>
                 <outlet property="headLineTitleLabel" destination="Rzp-Ok-kHv" id="587-MZ-YQe"/>
                 <outlet property="imageContentView" destination="mcY-pA-mz1" id="qDa-oq-9WP"/>
                 <outlet property="sourceNameLabel" destination="u3S-C3-Pj1" id="fbm-SB-bX3"/>

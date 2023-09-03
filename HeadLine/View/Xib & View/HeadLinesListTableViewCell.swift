@@ -9,20 +9,27 @@ import UIKit
 
 class HeadLinesListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var headLineNewsImage: CustomImageView!
     @IBOutlet weak var imageContentView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var sourceNameLabel: UILabel!
     @IBOutlet weak var headLineTitleLabel: UILabel!
-    @IBOutlet weak var headLineNewsImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
+        headLineNewsImage.layer.cornerRadius = 10
+        imageContentView.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func loadCellValues(data: ArticalSet) {
+        headLineNewsImage.loadImage(urlString: data.urlToImage ?? "")
+        headLineTitleLabel.text = data.title
+        dateLabel.text = Utils().convertUTCDateStringToFormattedDateString(utcDateString: data.publishedAt ?? "")
+        sourceNameLabel.text = data.source?.name
     }
     
 }
