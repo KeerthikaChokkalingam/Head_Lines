@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>894270925824-dqots6jl9tbd0bunp4ui534v60ep4bnv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.894270925824-dqots6jl9tbd0bunp4ui534v60ep4bnv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCDewuEIxiutWbEIFGed8kXTuFOXoJNmHg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>894270925824</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Keerthika-Chokkalingam.HeadLine</string>
+	<key>PROJECT_ID</key>
+	<string>headlinesapp-397814</string>
+	<key>STORAGE_BUCKET</key>
+	<string>headlinesapp-397814.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:894270925824:ios:51534aec65f7717b83bce5</string>
+</dict>
+</plist>

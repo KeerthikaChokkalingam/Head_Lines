@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		002EA4CF9F47D145479552C7 /* Pods_HeadLine_HeadLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A565A3789E46C56BCA201FDE /* Pods_HeadLine_HeadLineUITests.framework */; };
+		37E221A12AA3A6AF00E1C45A /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37E2219F2AA3A6AF00E1C45A /* RobotoSlab-Regular.ttf */; };
+		37E221A22AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37E221A02AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf */; };
+		37E221A82AA3AE0000E1C45A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37E221A72AA3AE0000E1C45A /* GoogleService-Info.plist */; };
 		37F917F82AA39D3F004439AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F917F72AA39D3F004439AE /* AppDelegate.swift */; };
 		37F917FA2AA39D3F004439AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F917F92AA39D3F004439AE /* SceneDelegate.swift */; };
-		37F917FC2AA39D3F004439AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F917FB2AA39D3F004439AE /* ViewController.swift */; };
+		37F917FC2AA39D3F004439AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F917FB2AA39D3F004439AE /* LoginViewController.swift */; };
 		37F917FF2AA39D3F004439AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F917FD2AA39D3F004439AE /* Main.storyboard */; };
 		37F918012AA39D40004439AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37F918002AA39D40004439AE /* Assets.xcassets */; };
 		37F918042AA39D40004439AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F918022AA39D40004439AE /* LaunchScreen.storyboard */; };
@@ -40,10 +43,13 @@
 
 /* Begin PBXFileReference section */
 		321DAB6E3FAC1FC9C030CB0C /* Pods-HeadLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadLineTests.release.xcconfig"; path = "Target Support Files/Pods-HeadLineTests/Pods-HeadLineTests.release.xcconfig"; sourceTree = "<group>"; };
+		37E2219F2AA3A6AF00E1C45A /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
+		37E221A02AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		37E221A72AA3AE0000E1C45A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37F917F42AA39D3F004439AE /* HeadLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F917F72AA39D3F004439AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F917F92AA39D3F004439AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37F917FB2AA39D3F004439AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37F917FB2AA39D3F004439AE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		37F917FE2AA39D3F004439AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37F918002AA39D40004439AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37F918032AA39D40004439AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +97,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37E221962AA3A5F200E1C45A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37F918002AA39D40004439AE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37E221972AA3A60100E1C45A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		37E221982AA3A60500E1C45A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		37E221992AA3A61300E1C45A /* DetailedHeadLineModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailedHeadLineModule;
+			sourceTree = "<group>";
+		};
+		37E2219A2AA3A61E00E1C45A /* HeadLineModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HeadLineModule;
+			sourceTree = "<group>";
+		};
+		37E2219B2AA3A62600E1C45A /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				37F917FB2AA39D3F004439AE /* LoginViewController.swift */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		37E2219C2AA3A63200E1C45A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37F917FD2AA39D3F004439AE /* Main.storyboard */,
+				37F918022AA39D40004439AE /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37E2219D2AA3A63A00E1C45A /* General */ = {
+			isa = PBXGroup;
+			children = (
+				37F917F92AA39D3F004439AE /* SceneDelegate.swift */,
+				37F917F72AA39D3F004439AE /* AppDelegate.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		37E2219E2AA3A64000E1C45A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				37E221A02AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf */,
+				37E2219F2AA3A6AF00E1C45A /* RobotoSlab-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		37F917EB2AA39D3F004439AE = {
 			isa = PBXGroup;
 			children = (
@@ -116,13 +193,17 @@
 		37F917F62AA39D3F004439AE /* HeadLine */ = {
 			isa = PBXGroup;
 			children = (
-				37F917F72AA39D3F004439AE /* AppDelegate.swift */,
-				37F917F92AA39D3F004439AE /* SceneDelegate.swift */,
-				37F917FB2AA39D3F004439AE /* ViewController.swift */,
-				37F917FD2AA39D3F004439AE /* Main.storyboard */,
-				37F918002AA39D40004439AE /* Assets.xcassets */,
-				37F918022AA39D40004439AE /* LaunchScreen.storyboard */,
+				37E2219E2AA3A64000E1C45A /* Font */,
+				37E2219D2AA3A63A00E1C45A /* General */,
+				37E2219C2AA3A63200E1C45A /* View */,
+				37E2219B2AA3A62600E1C45A /* LoginModule */,
+				37E2219A2AA3A61E00E1C45A /* HeadLineModule */,
+				37E221992AA3A61300E1C45A /* DetailedHeadLineModule */,
+				37E221982AA3A60500E1C45A /* Constants */,
+				37E221972AA3A60100E1C45A /* Utils */,
+				37E221962AA3A5F200E1C45A /* Resources */,
 				37F918052AA39D40004439AE /* Info.plist */,
+				37E221A72AA3AE0000E1C45A /* GoogleService-Info.plist */,
 			);
 			path = HeadLine;
 			sourceTree = "<group>";
@@ -164,7 +245,6 @@
 				DEC00113589C7E35221ED037 /* Pods-HeadLineTests.debug.xcconfig */,
 				321DAB6E3FAC1FC9C030CB0C /* Pods-HeadLineTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -278,8 +358,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				37F918042AA39D40004439AE /* LaunchScreen.storyboard in Resources */,
+				37E221A12AA3A6AF00E1C45A /* RobotoSlab-Regular.ttf in Resources */,
+				37E221A22AA3A6AF00E1C45A /* RobotoSlab-Bold.ttf in Resources */,
 				37F918012AA39D40004439AE /* Assets.xcassets in Resources */,
 				37F917FF2AA39D3F004439AE /* Main.storyboard in Resources */,
+				37E221A82AA3AE0000E1C45A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37F917FC2AA39D3F004439AE /* ViewController.swift in Sources */,
+				37F917FC2AA39D3F004439AE /* LoginViewController.swift in Sources */,
 				37F917F82AA39D3F004439AE /* AppDelegate.swift in Sources */,
 				37F917FA2AA39D3F004439AE /* SceneDelegate.swift in Sources */,
 			);
@@ -515,7 +598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -569,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

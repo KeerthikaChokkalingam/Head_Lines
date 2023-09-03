@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>GoogleSignIn</key>
+    <dict>
+        <key>GIDClientID</key>
+        <string>894270925824-dqots6jl9tbd0bunp4ui534v60ep4bnv.apps.googleusercontent.com</string>
+    </dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.894270925824-dqots6jl9tbd0bunp4ui534v60ep4bnv</string>
+			</array>
+		</dict>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -19,6 +35,11 @@
 					<string>Main</string>
 				</dict>
 			</array>
+            <key>UIAppFonts</key>
+            <array>
+                <string>RobotoSlab-Regular.ttf</string>
+                <string>RobotoSlab-Bold.ttf</string>
+            </array>
 		</dict>
 	</dict>
 </dict>
