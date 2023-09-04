@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Root View Controller-->
         <scene sceneID="aK1-lD-E0N">
             <objects>
-                <navigationController navigationBarHidden="YES" id="Nep-hL-A3i" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootViewController" navigationBarHidden="YES" id="Nep-hL-A3i" customClass="RootViewController" customModule="HeadLine" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fla-3C-GtD">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

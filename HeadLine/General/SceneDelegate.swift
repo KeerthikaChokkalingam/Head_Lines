@@ -20,25 +20,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let window = (scene as? UIWindowScene) else { return }
         
+        guard let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootViewController") as? RootViewController else { return }
+        guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
+        guard let firstWindow = firstScene.windows.first else { return }
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
                 print("logedout")
                 
-                guard let scene = UIApplication.shared.connectedScenes.first, let sceneDelegate = scene.delegate as? SceneDelegate else {
-                    fatalError("Could not get scene delegate!")
-                }
-                let dashboardStoryboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-                sceneDelegate.window?.rootViewController = dashboardStoryboard
-                sceneDelegate.window?.makeKeyAndVisible()
+                guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+                    withIdentifier: "LoginViewController") as? LoginViewController else { return }
+                navigationController.viewControllers = [storyboard]
+                firstWindow.rootViewController = navigationController
                 
             } else {
                 print("logedin")
-                guard let scene = UIApplication.shared.connectedScenes.first, let sceneDelegate = scene.delegate as? SceneDelegate else {
-                    fatalError("Could not get scene delegate!")
-                }
-                let dashboardStoryboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeadLinesViewController") as! HeadLinesViewController
-                sceneDelegate.window?.rootViewController = dashboardStoryboard
-                sceneDelegate.window?.makeKeyAndVisible()
+                guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+                    withIdentifier: "HeadLinesViewController") as? HeadLinesViewController else { return }
+                navigationController.viewControllers = [storyboard]
+                firstWindow.rootViewController = navigationController
+            }
+        }
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let user = user {
+                // User is signed in
+                print("User is logged in with UID: \(user.uid)")
+                guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+                    withIdentifier: "HeadLinesViewController") as? HeadLinesViewController else { return }
+                navigationController.viewControllers = [storyboard]
+                firstWindow.rootViewController = navigationController
+            } else {
+                // User is signed out
+                print("User is signed out.")
+                guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+                    withIdentifier: "LoginViewController") as? LoginViewController else { return }
+                navigationController.viewControllers = [storyboard]
+                firstWindow.rootViewController = navigationController
             }
         }
     }

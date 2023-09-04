@@ -34,6 +34,7 @@
 		37F918192AA39D40004439AE /* HeadLineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F918182AA39D40004439AE /* HeadLineUITests.swift */; };
 		37F9181B2AA39D40004439AE /* HeadLineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9181A2AA39D40004439AE /* HeadLineUITestsLaunchTests.swift */; };
 		37FD95952AA58351003B749A /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD95942AA58351003B749A /* OTPViewController.swift */; };
+		37FD95972AA5A171003B749A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD95962AA5A171003B749A /* RootViewController.swift */; };
 		B8963EAECEC9E81FC9FC61E4 /* Pods_HeadLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612A6B2F46F6AE06857AEEE9 /* Pods_HeadLine.framework */; };
 		CDBEAC73D3AA4B5D97C6A57E /* Pods_HeadLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9827483FCFC6CBD057529A5D /* Pods_HeadLineTests.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		37F918182AA39D40004439AE /* HeadLineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineUITests.swift; sourceTree = "<group>"; };
 		37F9181A2AA39D40004439AE /* HeadLineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		37FD95942AA58351003B749A /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		37FD95962AA5A171003B749A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5385038AF64E5D9E22BF5AE6 /* Pods-HeadLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadLine.release.xcconfig"; path = "Target Support Files/Pods-HeadLine/Pods-HeadLine.release.xcconfig"; sourceTree = "<group>"; };
 		612A6B2F46F6AE06857AEEE9 /* Pods_HeadLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9827483FCFC6CBD057529A5D /* Pods_HeadLineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadLineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +255,7 @@
 			children = (
 				37F917F92AA39D3F004439AE /* SceneDelegate.swift */,
 				37F917F72AA39D3F004439AE /* AppDelegate.swift */,
+				37FD95962AA5A171003B749A /* RootViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3795796F2AA43F2F0091E9CA /* HeadLinesListTableViewCell.swift in Sources */,
+				37FD95972AA5A171003B749A /* RootViewController.swift in Sources */,
 				37254D232AA4ADED00ACA583 /* CustomImageView.swift in Sources */,
 				3795796B2AA43EDF0091E9CA /* HeadLinesViewController.swift in Sources */,
 				3795797E2AA44FD90091E9CA /* ApiConstants.swift in Sources */,

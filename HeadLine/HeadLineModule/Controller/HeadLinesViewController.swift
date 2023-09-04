@@ -26,6 +26,7 @@ extension HeadLinesViewController {
     func setUpUI() {
         headLineListTableView.delegate = self
         headLineListTableView.dataSource = self
+        headLineListTableView.reloadData()
         headLineListTableView.register(UINib(nibName: "HeadLinesListTableViewCell", bundle: nil), forCellReuseIdentifier: "HeadLinesListTableViewCell")
         indicator = Utils().setUpLoader(sender: view)
         getNewsApiCall()
