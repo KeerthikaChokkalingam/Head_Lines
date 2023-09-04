@@ -58,13 +58,12 @@ class LoginViewController: UIViewController {
                         if let error = error {
                             print("Error saving user data: \(error.localizedDescription)")
                         } else {
+                            UserDefaults.standard.setValue(true, forKey: "logInWithGoogle")
                             self?.goToHeadlines()
                             print("User data saved successfully")
                         }
                     }
-                    
                 }
-                
             }
     }
     @IBAction func getCodeAction(_ sender: UIButton) {
@@ -82,6 +81,7 @@ class LoginViewController: UIViewController {
                     // Save the verification ID for later use
                     UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
                     self.goToOtpScreen()
+                    UserDefaults.standard.setValue(false, forKey: "logInWithGoogle")
                     // Proceed to the verification code entry screen
                 }
             }else {

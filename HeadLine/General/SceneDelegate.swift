@@ -18,47 +18,50 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let window = (scene as? UIWindowScene) else { return }
         
         guard let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootViewController") as? RootViewController else { return }
         guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
         guard let firstWindow = firstScene.windows.first else { return }
-        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-            if error != nil || user == nil {
-                print("logedout")
-                
-                guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-                    withIdentifier: "LoginViewController") as? LoginViewController else { return }
-                navigationController.viewControllers = [storyboard]
-                firstWindow.rootViewController = navigationController
-                
+        if let logInUsingGoogle = (UserDefaults.standard.bool(forKey: "logInWithGoogle")) as? Bool  {
+            if logInUsingGoogle {
+                GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                    if error != nil || user == nil {
+                        print("logedout")
+                        
+                        guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+                            withIdentifier: "LoginViewController") as? LoginViewController else { return }
+                        navigationController.viewControllers = [storyboard]
+                        firstWindow.rootViewController = navigationController
+                        
+                    } else {
+                        print("logedin")
+                        guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+                            withIdentifier: "HeadLinesViewController") as? HeadLinesViewController else { return }
+                        navigationController.viewControllers = [storyboard]
+                        firstWindow.rootViewController = navigationController
+                    }
+                }
             } else {
-                print("logedin")
-                guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-                    withIdentifier: "HeadLinesViewController") as? HeadLinesViewController else { return }
-                navigationController.viewControllers = [storyboard]
-                firstWindow.rootViewController = navigationController
-            }
-        }
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            if let user = user {
-                // User is signed in
-                print("User is logged in with UID: \(user.uid)")
-                guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-                    withIdentifier: "HeadLinesViewController") as? HeadLinesViewController else { return }
-                navigationController.viewControllers = [storyboard]
-                firstWindow.rootViewController = navigationController
-            } else {
-                // User is signed out
-                print("User is signed out.")
-                guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-                    withIdentifier: "LoginViewController") as? LoginViewController else { return }
-                navigationController.viewControllers = [storyboard]
-                firstWindow.rootViewController = navigationController
+                Auth.auth().addStateDidChangeListener { (auth, user) in
+                    if let user = user {
+                        // User is signed in
+                        print("User is logged in with UID: \(user.uid)")
+                        guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+                            withIdentifier: "HeadLinesViewController") as? HeadLinesViewController else { return }
+                        navigationController.viewControllers = [storyboard]
+                        firstWindow.rootViewController = navigationController
+                    } else {
+                        // User is signed out
+                        print("User is signed out.")
+                        guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+                            withIdentifier: "LoginViewController") as? LoginViewController else { return }
+                        navigationController.viewControllers = [storyboard]
+                        firstWindow.rootViewController = navigationController
+                    }
+                }
             }
         }
     }
-    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
