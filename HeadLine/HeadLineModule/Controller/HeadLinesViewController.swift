@@ -75,8 +75,6 @@ extension HeadLinesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let detaildHeadLineVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailedHeadLineViewController") as? DetailedHeadLineViewController else {return}
         detaildHeadLineVc.gettedArticleSet = responseNews?.articles?[indexPath.row]
-        self.addChild(detaildHeadLineVc)
-        self.view.addSubview(detaildHeadLineVc.view)
-        detaildHeadLineVc.didMove(toParent: self)
+        self.navigationController?.pushViewController(detaildHeadLineVc, animated: true)
     }
 }

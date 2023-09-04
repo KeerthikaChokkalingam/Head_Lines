@@ -134,20 +134,12 @@ extension LoginViewController {
         }
     }
     func goToHeadlines() {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "HeadLinesViewController") as? HeadLinesViewController
-        guard let scene = UIApplication.shared.connectedScenes.first, let sceneDelegate = scene.delegate as? SceneDelegate else {
-            fatalError("Could not get scene delegate!")
-        }
-        sceneDelegate.window?.rootViewController = secondViewController
-        sceneDelegate.window?.makeKeyAndVisible()
+        guard let detaildHeadLineVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeadLinesViewController") as? HeadLinesViewController else {return}
+        self.navigationController?.pushViewController(detaildHeadLineVc, animated: true)
     }
     func goToOtpScreen() {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
-        guard let scene = UIApplication.shared.connectedScenes.first, let sceneDelegate = scene.delegate as? SceneDelegate else {
-            fatalError("Could not get scene delegate!")
-        }
-        sceneDelegate.window?.rootViewController = secondViewController
-        sceneDelegate.window?.makeKeyAndVisible()
+        guard let detaildHeadLineVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController else {return}
+        self.navigationController?.pushViewController(detaildHeadLineVc, animated: true)
     }
     func verifySMSCode(_ code: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
         if let verificationID = UserDefaults.standard.string(forKey: "authVerificationID") {

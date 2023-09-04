@@ -33,7 +33,6 @@ class DetailedHeadLineViewController: UIViewController {
     }
     
     @IBAction func backToHeadlinesPage(_ sender: UIButton) {
-        self.view.removeFromSuperview()
-        self.removeFromParent()
+        navigationController?.popViewController(animated: true)
     }
 }
