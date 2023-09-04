@@ -64,7 +64,7 @@
                                         <rect key="frame" x="0.0" y="100" width="393" height="659"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huF-iI-bK9">
-                                                <rect key="frame" x="36.666666666666657" y="137.66666666666669" width="320" height="384.00000000000006"/>
+                                                <rect key="frame" x="36.666666666666657" y="107.66666666666669" width="320" height="384"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to HeadLines App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q1-r6-yVR">
                                                         <rect key="frame" x="0.0" y="15" width="320" height="24"/>
@@ -88,7 +88,7 @@
                                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
                                                         <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <inset key="titleEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <inset key="imageEdgeInsets" minX="10" minY="3" maxX="210" maxY="3"/>
+                                                        <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="210" maxY="0.0"/>
                                                         <state key="normal" title="Login with Google" image="Google">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -119,7 +119,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSZ-j1-oam">
-                                                        <rect key="frame" x="15" y="242.99999999999994" width="290" height="0.0"/>
+                                                        <rect key="frame" x="15" y="243" width="290" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="dc7-zZ-35F"/>
                                                         </constraints>
@@ -155,7 +155,7 @@
                                         <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="huF-iI-bK9" firstAttribute="centerX" secondItem="UCe-Ft-b6N" secondAttribute="centerX" id="Dpe-OA-Ap1"/>
-                                            <constraint firstItem="huF-iI-bK9" firstAttribute="centerY" secondItem="UCe-Ft-b6N" secondAttribute="centerY" id="tXS-VK-abr"/>
+                                            <constraint firstItem="huF-iI-bK9" firstAttribute="centerY" secondItem="UCe-Ft-b6N" secondAttribute="centerY" constant="-30" id="tXS-VK-abr"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -223,7 +223,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vno-2Q-Xe3">
-                                        <rect key="frame" x="30" y="254.66666666666669" width="343" height="250"/>
+                                        <rect key="frame" x="30" y="234.66666666666669" width="343" height="250"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWA-Pa-ae3">
                                                 <rect key="frame" x="15" y="25" width="313" height="24"/>
@@ -297,7 +297,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vno-2Q-Xe3" secondAttribute="trailing" constant="20" id="45D-ia-9RI"/>
                                     <constraint firstAttribute="trailing" secondItem="0qu-y8-amC" secondAttribute="trailing" id="7Ln-cw-g80"/>
-                                    <constraint firstItem="vno-2Q-Xe3" firstAttribute="centerY" secondItem="Cja-Ko-uBf" secondAttribute="centerY" id="OAl-ux-8W2"/>
+                                    <constraint firstItem="vno-2Q-Xe3" firstAttribute="centerY" secondItem="Cja-Ko-uBf" secondAttribute="centerY" constant="-20" id="OAl-ux-8W2"/>
                                     <constraint firstItem="vno-2Q-Xe3" firstAttribute="leading" secondItem="Cja-Ko-uBf" secondAttribute="leading" constant="30" id="SlR-FM-9sG"/>
                                     <constraint firstItem="0qu-y8-amC" firstAttribute="leading" secondItem="Cja-Ko-uBf" secondAttribute="leading" id="aiv-kJ-FF6"/>
                                     <constraint firstItem="0qu-y8-amC" firstAttribute="top" secondItem="Cja-Ko-uBf" secondAttribute="top" id="w9m-T0-OPI"/>
