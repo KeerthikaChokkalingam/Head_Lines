@@ -8,7 +8,6 @@
 import Foundation
 
 class ApiConstants {
-    public static var domainUrl: String = "https://newsapi.org/v2/everything?q=apple&from=2023-09-02&to=2023-09-03&sortBy=popularity&apiKey="
     public static var accessKey: String = "da4453789d80491b803502f1af766646"
-    public static var sourceUrl: String = domainUrl + accessKey
+    public static var sourceUrl: String = "https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=" + accessKey
 }
