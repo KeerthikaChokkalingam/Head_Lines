@@ -29,21 +29,30 @@ class OTPViewController: UIViewController {
         if otpValue != "" && otpValue.count == 6 {
             let verifyId: String = (UserDefaults.standard.object(forKey: "authVerificationID") as? String)!
             let credential = PhoneAuthProvider.provider().credential(withVerificationID: verifyId, verificationCode: otpValue)
-            
-            Auth.auth().signIn(with: credential) { (authResult, error) in
-                if let error = error {
-                    // Handle error
-                    print("Error verifying OTP: \(error.localizedDescription)")
-                    self.otpErrorLabelHeight.constant = 14
-                    self.otpErrorLabel.text = "Please Enter a valid OTP"
-                    return
+            if NetworkConnectionHandler().checkReachable() {
+                Auth.auth().signIn(with: credential) { (authResult, error) in
+                    if let error = error {
+                        // Handle error
+                        print("Error verifying OTP: \(error.localizedDescription)")
+                        self.otpErrorLabelHeight.constant = 14
+                        self.otpErrorLabel.text = "Please Enter a valid OTP"
+                        return
+                    }
+                    
+                    // OTP verification successful, the user is now authenticated
+                    print("User authenticated: \(authResult?.user.uid ?? "N/A")")
+                    if authResult?.user.uid != nil && authResult?.user.uid != "" {
+                        self.goToHeadlines()
+                    }
                 }
-                
-                // OTP verification successful, the user is now authenticated
-                print("User authenticated: \(authResult?.user.uid ?? "N/A")")
-                if authResult?.user.uid != nil && authResult?.user.uid != "" {
-                    self.goToHeadlines()
-                }
+            } else {
+                let controller = UIAlertController(title: "No Internet Detected", message: "This app requires an Internet connection", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+                        UIAlertAction in
+                    controller.dismiss(animated: true)
+                    }
+                controller.addAction(okAction)
+                present(controller, animated: true, completion: nil)
             }
         } else {
             // empty field error
