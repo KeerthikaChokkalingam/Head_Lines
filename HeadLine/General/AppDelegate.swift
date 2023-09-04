@@ -26,6 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("logedin")
             }
         }
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let user = user {
+                // User is signed in
+                print("User is logged in with UID: \(user.uid)")
+            } else {
+                // User is signed out
+                print("User is signed out.")
+            }
+        }
         // Override point for customization after application launch.
         return true
     }

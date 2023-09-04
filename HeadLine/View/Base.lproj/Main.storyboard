@@ -194,6 +194,137 @@
             </objects>
             <point key="canvasLocation" x="-474.04580152671753" y="2.8169014084507045"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="LaY-Nz-xIE">
+            <objects>
+                <viewController storyboardIdentifier="OTPViewController" id="Mf0-Bv-JTC" customClass="OTPViewController" customModule="HeadLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cbq-c9-ihI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cja-Ko-uBf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qu-y8-amC">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" O T P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JR-yj-KdI">
+                                                <rect key="frame" x="156.33333333333334" y="31.000000000000004" width="80.333333333333343" height="38.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="29"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3JR-yj-KdI" firstAttribute="centerY" secondItem="0qu-y8-amC" secondAttribute="centerY" id="0Ka-19-TXa"/>
+                                            <constraint firstAttribute="height" constant="100" id="Mya-2F-wJx"/>
+                                            <constraint firstItem="3JR-yj-KdI" firstAttribute="centerX" secondItem="0qu-y8-amC" secondAttribute="centerX" id="svN-fC-MEB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vno-2Q-Xe3">
+                                        <rect key="frame" x="30" y="254.66666666666669" width="343" height="250"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWA-Pa-ae3">
+                                                <rect key="frame" x="15" y="25" width="313" height="24"/>
+                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rw6-Ph-p9a">
+                                                <rect key="frame" x="0.0" y="89" width="343" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VyI-3A-gR2" customClass="PaddedTextField" customModule="HeadLine" customModuleProvider="target">
+                                                        <rect key="frame" x="23" y="7.3333333333333144" width="297" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="gBd-JI-rIG"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" returnKeyType="send" smartDashesType="no" smartInsertDeleteType="no" textContentType="tel"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BmF-tO-Ktm"/>
+                                                    <constraint firstItem="VyI-3A-gR2" firstAttribute="leading" secondItem="Rw6-Ph-p9a" secondAttribute="leading" constant="23" id="TQZ-ak-cyu"/>
+                                                    <constraint firstItem="VyI-3A-gR2" firstAttribute="centerY" secondItem="Rw6-Ph-p9a" secondAttribute="centerY" id="fdj-lj-cPg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VyI-3A-gR2" secondAttribute="trailing" constant="23" id="xCg-0Y-Hbe"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-oL-6Wn">
+                                                <rect key="frame" x="130" y="169" width="83" height="35"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="OWg-rD-fkD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="18"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" L O G I N ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginButtonAction:" destination="Mf0-Bv-JTC" eventType="touchUpInside" id="U4a-zN-LWG"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60R-DN-2QC">
+                                                <rect key="frame" x="23.000000000000004" y="139" width="36.333333333333343" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="uzZ-9y-HT1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="AWA-Pa-ae3" firstAttribute="top" secondItem="vno-2Q-Xe3" secondAttribute="top" constant="25" id="11I-Yj-BKX"/>
+                                            <constraint firstItem="60R-DN-2QC" firstAttribute="leading" secondItem="VyI-3A-gR2" secondAttribute="leading" id="3JL-pw-Lpe"/>
+                                            <constraint firstAttribute="height" constant="250" id="9gk-P5-I8Y"/>
+                                            <constraint firstItem="NVS-oL-6Wn" firstAttribute="top" secondItem="60R-DN-2QC" secondAttribute="bottom" constant="30" id="L1G-5Z-M2K"/>
+                                            <constraint firstItem="60R-DN-2QC" firstAttribute="top" secondItem="Rw6-Ph-p9a" secondAttribute="bottom" id="Mox-DQ-AKZ"/>
+                                            <constraint firstItem="Rw6-Ph-p9a" firstAttribute="leading" secondItem="vno-2Q-Xe3" secondAttribute="leading" id="Yow-J3-o1D"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rw6-Ph-p9a" secondAttribute="trailing" id="av7-gx-Vgr"/>
+                                            <constraint firstAttribute="trailing" secondItem="AWA-Pa-ae3" secondAttribute="trailing" constant="15" id="bec-JJ-DiT"/>
+                                            <constraint firstItem="Rw6-Ph-p9a" firstAttribute="top" secondItem="AWA-Pa-ae3" secondAttribute="bottom" constant="40" id="gzx-Sj-7BK"/>
+                                            <constraint firstItem="AWA-Pa-ae3" firstAttribute="leading" secondItem="vno-2Q-Xe3" secondAttribute="leading" constant="15" id="h2w-lv-HkG"/>
+                                            <constraint firstItem="NVS-oL-6Wn" firstAttribute="centerX" secondItem="vno-2Q-Xe3" secondAttribute="centerX" id="yg2-DR-3jA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vno-2Q-Xe3" secondAttribute="trailing" constant="20" id="45D-ia-9RI"/>
+                                    <constraint firstAttribute="trailing" secondItem="0qu-y8-amC" secondAttribute="trailing" id="7Ln-cw-g80"/>
+                                    <constraint firstItem="vno-2Q-Xe3" firstAttribute="centerY" secondItem="Cja-Ko-uBf" secondAttribute="centerY" id="OAl-ux-8W2"/>
+                                    <constraint firstItem="vno-2Q-Xe3" firstAttribute="leading" secondItem="Cja-Ko-uBf" secondAttribute="leading" constant="30" id="SlR-FM-9sG"/>
+                                    <constraint firstItem="0qu-y8-amC" firstAttribute="leading" secondItem="Cja-Ko-uBf" secondAttribute="leading" id="aiv-kJ-FF6"/>
+                                    <constraint firstItem="0qu-y8-amC" firstAttribute="top" secondItem="Cja-Ko-uBf" secondAttribute="top" id="w9m-T0-OPI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y0L-fO-AiY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y0L-fO-AiY" firstAttribute="trailing" secondItem="Cja-Ko-uBf" secondAttribute="trailing" id="7aJ-3N-eDe"/>
+                            <constraint firstItem="Cja-Ko-uBf" firstAttribute="leading" secondItem="Y0L-fO-AiY" secondAttribute="leading" id="JLd-Mb-NOt"/>
+                            <constraint firstItem="Cja-Ko-uBf" firstAttribute="top" secondItem="Y0L-fO-AiY" secondAttribute="top" id="nZO-5V-25H"/>
+                            <constraint firstItem="Y0L-fO-AiY" firstAttribute="bottom" secondItem="Cja-Ko-uBf" secondAttribute="bottom" id="p4s-FM-t3Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstField" destination="VyI-3A-gR2" id="cZK-07-X6p"/>
+                        <outlet property="loginButton" destination="NVS-oL-6Wn" id="6oj-5u-Qa4"/>
+                        <outlet property="otpContentView" destination="vno-2Q-Xe3" id="k9y-Ka-Q2b"/>
+                        <outlet property="otpErrorLabel" destination="60R-DN-2QC" id="HWd-JB-fTm"/>
+                        <outlet property="otpErrorLabelHeight" destination="uzZ-9y-HT1" id="Qbz-SD-nJT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OdF-NC-atP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484.73282442748092" y="2.8169014084507045"/>
+        </scene>
         <!--Head Lines View Controller-->
         <scene sceneID="JLF-0c-R4f">
             <objects>
@@ -267,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qB-Mc-IgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="3"/>
+            <point key="canvasLocation" x="1515" y="3"/>
         </scene>
         <!--Detailed Head Line View Controller-->
         <scene sceneID="zZZ-4Y-4lF">
@@ -364,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2B-fj-jhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="3"/>
+            <point key="canvasLocation" x="2444" y="3"/>
         </scene>
     </scenes>
     <resources>

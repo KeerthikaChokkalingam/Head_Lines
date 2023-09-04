@@ -39,7 +39,7 @@ extension HeadLinesViewController {
                 let filter = self?.responseNews?.articles?.filter{$0.urlToImage != nil}
                 self?.responseNews?.articles = filter
                 DispatchQueue.main.async {
-                    Utils().endLoading(sender: self!.indicator, wholeView: self?.view ?? UIView())
+                    Utils().endLoading(sender: self?.indicator ?? UIActivityIndicatorView() , wholeView: self?.view ?? UIView())
                     self?.headLineListTableView.reloadData()
                 }
             })

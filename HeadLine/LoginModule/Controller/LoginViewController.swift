@@ -81,6 +81,7 @@ class LoginViewController: UIViewController {
                     }
                     // Save the verification ID for later use
                     UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+                    self.goToOtpScreen()
                     // Proceed to the verification code entry screen
                 }
             }else {
@@ -134,6 +135,14 @@ extension LoginViewController {
     }
     func goToHeadlines() {
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "HeadLinesViewController") as? HeadLinesViewController
+        guard let scene = UIApplication.shared.connectedScenes.first, let sceneDelegate = scene.delegate as? SceneDelegate else {
+            fatalError("Could not get scene delegate!")
+        }
+        sceneDelegate.window?.rootViewController = secondViewController
+        sceneDelegate.window?.makeKeyAndVisible()
+    }
+    func goToOtpScreen() {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "OTPViewController") as? OTPViewController
         guard let scene = UIApplication.shared.connectedScenes.first, let sceneDelegate = scene.delegate as? SceneDelegate else {
             fatalError("Could not get scene delegate!")
         }
